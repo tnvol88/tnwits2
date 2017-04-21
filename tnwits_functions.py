@@ -4,6 +4,21 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+def error_checks(intervention, total, black, hispanic, asian, fourteen,
+                 fifteen,eighteen,twentyfour,older):
+    if intervention == 'Intervention #4':
+        if sum(twentyfour, older) != total:
+            print('sum of ages does not match total')
+            return False
+    else:
+	if sum(fourteen,fift,eight) != total:
+	    print('sum of ages does not match total')
+	    return False
+    elif sum(black,hispanic,asian) != total:
+        print('sum of races does not match total')
+        return False
+    return True 
+
 def loginPage(driver):
     username_field = driver.find_element_by_id('Identifier')
     username_field.send_keys('BenTaylor')
@@ -293,7 +308,7 @@ def pageThree(driver,total_participant_amount, parents, note_text,intervention_v
 
     ### variable
     parents = driver.find_element_by_id('ParentParticipantCount')
-    parents.send_keys('1')
+    parents.send_keys(parents)
 
     ### variable
     fraternal = driver.find_element_by_id('ReligiousParticipantCount')
