@@ -104,13 +104,13 @@ enter_button = driver.find_element_by_id('Agree')
 enter_button.send_keys(Keys.RETURN)
 
 username_field = driver.find_element_by_id('Identifier')
-username_field.send_keys('BenTaylor')
+username_field.send_keys('')
 
 password_field = driver.find_element_by_id('Password')
-password_field.send_keys('milligan')
+password_field.send_keys('')
 
 pin_field = driver.find_element_by_id('Pin')
-pin_field.send_keys('987654')
+pin_field.send_keys('')
 
 submit_button = driver.find_element_by_xpath("//button[@type='submit']")
 submit_button.click()
